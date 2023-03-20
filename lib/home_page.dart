@@ -16,7 +16,9 @@ class HomePage extends StatelessWidget {
           itemCount: rentalCar.length,
           itemBuilder: (context, index) {
             final RentalCar car = rentalCar[index];
-            return ListTile(
+            return Container(
+                // height: 100,
+                child: ListTile(
               onTap: () {
                 Navigator.push(
                     context,
@@ -24,10 +26,10 @@ class HomePage extends StatelessWidget {
                         builder: (context) => DetailPage(car: car)));
               },
               leading:
-                Image.network(car.images[0], width: 200, fit: BoxFit.cover),
+                  Image.network(car.images[0], width: 120, fit: BoxFit.cover),
               title: Text(car.brand + ' ' + car.model),
               subtitle: Text(car.rentalPricePerDay + ' / hari'),
-            );
+            ));
           }),
     );
   }

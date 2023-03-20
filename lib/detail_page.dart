@@ -10,9 +10,33 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Center(
-        child: Text('ini halaman Detail'),
-      ),
-      )
+        child: Text(car.brand + ' ' + car.model),
+      )),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(10),
+        child: Column(
+          children: [
+            Center(
+              child: Image.network(car.images[0], height: 200,),
+            ),
+            SizedBox(height: 12.0),
+
+            Center(
+              child: Text(car.brand + ' ' + car.model,
+                style: TextStyle(fontWeight: FontWeight.bold,
+                    fontSize: 32
+                ),
+              ),
+            ),
+            SizedBox(height: 12.0),
+
+            
+            
+          ],
+        ),
+        )
+      
     );
+    
   }
 }
