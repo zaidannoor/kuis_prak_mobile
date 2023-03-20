@@ -110,8 +110,9 @@ class _DetailPageState extends State<DetailPage> {
                         style: TextStyle(fontSize: 17.0),
                       ),
                       Text(
-                        widget.car.available ? 'Tersedia' : 'Tidak Tersedia',
-                        style: TextStyle(fontSize: 17.0),
+                        widget.car.available ? 
+                        'Tersedia' : 
+                        'Tidak Tersedia',
                       )
                     ]),
                   ],
