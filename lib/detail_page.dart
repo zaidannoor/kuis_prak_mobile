@@ -113,6 +113,8 @@ class _DetailPageState extends State<DetailPage> {
                         widget.car.available ? 
                         'Tersedia' : 
                         'Tidak Tersedia',
+
+                        style: TextStyle(color: widget.car.available ? Colors.green : Colors.red),
                       )
                     ]),
                   ],
